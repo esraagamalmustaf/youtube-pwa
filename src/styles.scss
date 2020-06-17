@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+@import "~bootstrap/scss/bootstrap";
+@import "./styling/variables.scss";
+body { margin: 0; }
+.clearfix{
+    clear: both;
+}
+.image{
+    width:$imgWidth;
+    height: $imgHeight;
+    background-color: $background-color;
+
+  }
+ 
+  .handCursor{
+      cursor: $handCursor;
+  }
+
+  @media(max-width:767px){
+  td{
+    font-size :$font-size-small
+
+  } 
+
+  
+  }

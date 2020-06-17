@@ -1,0 +1,61 @@
+@import "../../../styling/variables.scss";
+.cover{
+    
+        width: 100%;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-color: $background-color
+      
+}
+
+button{
+background-color: $theme-color;
+color: $button-color-hover;
+float:$float-right
+}
+h3{
+    float: left;
+}
+.header{
+    margin-top:20px
+}
+.container-fluid{
+    padding:0px  4vw!important
+
+}
+.leftSection{
+    float:$float-right
+}
+.eye{
+    margin-right: 20px
+}
+.data{
+    color: $theme-color
+}
+.description{
+    margin: 30px 0px $main-margin;
+}
+
+pre{
+    white-space: pre-line;border:none;
+    line-height:2;
+     color: $font-color;
+    justify-content: left;
+     word-break: keep-all
+}
+[class^="icon-"], [class*=" icon-"] {
+  
+    font-size: 20px;
+    margin: 10px;
+    color:$font-color
+}
+.icon-height{
+    height:$icon-height!important;margin: 0px 10px
+  }
+  .close{
+      float: right;
+      cursor: $handCursor;
+  }
+

@@ -1,0 +1,23 @@
+<div class="container-fluid">
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th scope="col">Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of favouriteList">
+
+            <ng-template [ngIf]="item.videoId != null">
+                <td> <img class="image" [src]="item?.thumbnail"></td>
+                <td> {{item?.title}}</td>
+            </ng-template>
+        </tr>
+    </tbody>
+
+
+</table>
+</div>

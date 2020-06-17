@@ -1,0 +1,51 @@
+
+@import "../../../styling/variables.scss";
+
+button:hover{
+background-color: $theme-color;
+color: $button-color-hover;
+}
+tr:hover{
+background-color: rgba(0, 0, 0, 0.05);
+   button{
+    background-color: $theme-color;
+    color: $button-color-hover; 
+   }
+}
+td{
+    vertical-align: middle
+}
+::ng-deep .page-item.active .page-link{
+    background-color: $theme-color!important;
+    border-color: $theme-color!important;
+}
+
+
+input[type=text]{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+     border: 1px solid #eee;
+     color: #eee;
+     width: 250px;
+     height: 30px;
+     padding-left: 10px;
+     background-color: #eee;
+    }
+    
+input[type=text]:focus {
+     outline: none;
+     border: 1px solid #eee;
+     color: #555;
+}
+.form-group{
+    float: right;margin:2%
+}
+
+@media(max-width:767px){
+    .col-width{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        
+      }
+}

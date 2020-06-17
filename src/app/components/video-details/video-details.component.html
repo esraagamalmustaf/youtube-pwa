@@ -1,0 +1,58 @@
+<div *ngIf="message" class="alert alert-success alert-dismissible fade show" role="alert" role="alert"
+    (click)="message = false">
+    <p class="alert-heading">added successfully to your favourite List
+        <span class="close" aria-hidden="true" (click)="message = false">&times;</span>
+    </p>
+
+</div>
+
+<img class="cover" [src]="Video?.snippet?.thumbnails?.maxres?.url">
+<div class="container-fluid ">
+    <div class="header">
+        <h3> {{Video?.snippet?.localized?.title}} </h3>
+       
+       
+        <button class="btn "
+            (click)="addToFavouriteList(videoId,Video?.snippet?.thumbnails?.maxres?.url,Video?.snippet?.localized?.title) ">
+            Add To Favourite
+        </button>
+            
+    </div>
+    <div class="clearfix"></div>
+    <hr>
+    <section class="statistics">
+        <div class="row">
+            <div class="col">
+                <app-rate [videoId]="videoId"></app-rate>
+            </div>
+            <div class="col">
+                <div class="duration text-center">
+                    Duration {{Video?.contentDetails?.duration}}
+                </div>
+            </div>
+            <div class="col">
+                <div class="leftSection">
+
+
+                    <img class="icon-height" src="assets/vision.svg" style="display: inline">
+                    <span>{{Video?.statistics?.viewCount}}</span>
+
+
+                    <img class="icon-height" src="assets/like.svg" style="display: inline">
+                    <span>{{Video?.statistics?.likeCount}}</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div class="clearfix"></div>
+    <hr>
+    <span class="data">
+        Published On {{Video?.snippet?.publishedAt}}
+    </span>
+    <pre class="description">
+
+       {{Video?.snippet?.description}}
+    </pre>
+
+</div>

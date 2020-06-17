@@ -1,0 +1,61 @@
+
+
+    <div class="form-group form-inline "  >
+        <input (keyup)="performFilter($event)" name="searchText"  class="form-control ml-2" type="text" [(ngModel)]="searchText"
+     
+        placeholder="  search by video title ... "/> 
+
+       
+    </div>
+<div *ngIf="loading" class="text-center">
+  <div class="spinner-border text-danger text-center" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+  <table class="table" *ngIf="!loading">
+    <thead>
+    <tr>
+    <th></th>
+      <th scope="col" >Title</th>
+      <th scope="col" >Date</th>
+      <th scope="col" ></th>
+    
+    </tr>
+    </thead>
+    <tbody>      
+            
+    <tr *ngFor="let item of filtered  | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize" routerLink="details/{{item.id?.videoId}}" class="handCursor">
+    <td> <img  class="image" [src]="item?.snippet?.thumbnails?.default?.url" class="mr-2" ></td>
+      <td  class="col-width">
+       
+        
+        {{item?.snippet?.title}}
+      
+      </td>
+      
+      <td #title>
+        
+          {{item?.snippet?.publishTime}}
+        
+      </td>
+      <td>
+            
+            <button type="btn" class="btn " routerLink="details/{{item.id?.videoId}}">
+                Details
+            </button>
+        </td>
+     
+    </tr>
+    </tbody>
+
+
+  </table>
+  <div class="d-flex justify-content-between p-2">
+        <ngb-pagination [collectionSize]="maxResults" [(page)]= "page" [pageSize]="pageSize">
+        </ngb-pagination>
+      
+       
+      </div>
+ 
+  
+

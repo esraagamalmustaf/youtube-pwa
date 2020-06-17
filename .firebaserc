@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "taskpwa-cbe2f": {
+      "hosting": {
+        "youtubeTask": [
+          "taskpwa-cbe2f"
+        ]
+      }
+    }
+  }
+}
